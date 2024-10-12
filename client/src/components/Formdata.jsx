@@ -28,9 +28,7 @@ const Formdata = ({ age, handleChange }) => {
             </FormControl>
             <input type="number" />
             <label htmlFor="">u.s. port of arrival</label><br />
-          </form>
-
-          <TextField
+            <TextField
             fullWidth
             id="standard-bare"
             variant="outlined"
@@ -43,6 +41,8 @@ const Formdata = ({ age, handleChange }) => {
               ),
             }}
           />
+            <label htmlFor="">estimated arrival date</label><br />
+          </form>
 
         </div>
       </div>
