@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header div.container{
+    background-color: rgb(14, 71, 57);
+}
+.header div.container a{
+    color:  white;
+}
+.header div.container i{
+    color: white;
+}
+
+.form_details div.container{
+    border: 1px solid red;
+    width: 60%;
+}
+.form_details label{
+    font-weight: bold;
+    text-transform: capitalize;
+}
+.form_details select{
+    border: 1px solid red;
+    height: 20px;
+}
