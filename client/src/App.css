@@ -18,8 +18,9 @@
 .form_details div.container{
     border: 1px solid red;
     width: 60%;
+    padding: 20px 0px;
 }
-.form_details label{
+label{
     font-weight: bold;
     text-transform: capitalize;
     display: block;
@@ -28,4 +29,15 @@
 .form_details select{
     border: 1px solid red;
     height: 20px;
+}
+.form_details span{
+    
+    text-transform: none;
+    font-weight: 100;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
 }

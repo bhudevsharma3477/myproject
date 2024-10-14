@@ -1,20 +1,24 @@
 import React from 'react';
 import { useState } from 'react';
 import './App.css';
-import Formdata from './components/Formdata';
 import Header from './components/Header';
+import Form1 from './pages/Form1';
+import Form2 from './pages/Form2';
+import Form3 from './pages/Form3';
 
 const App = () => {
-  const [age, setAge] = useState("ACBD");
+  const [data, set_data] = useState("ACBD");
 
   const handleChange = (event) => {
-    setAge(event.target.value);
+    set_data(event.target.value);
   };
 
   return(
     <>
     <Header />
-    <Formdata age={age} handleChange={handleChange} />
+    {/*<Form1 data={data} handleChange={handleChange} />*/}
+    {/*<Form2 />*/}
+    {<Form3 />}
     </>
   );
 }
