@@ -6,7 +6,7 @@ const Header = () => {
             <div className="header">
                 <div className="container">
                     <nav className="navbar navbar-expand-xxl">
-                        <a className="navbar-brand" href="#">Start New ACE eManifest</a>
+                    Start New ACE eManifest
                         
                         <i className="fas fa-ellipsis-v navbar-toggler" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" />
                         
