@@ -10,13 +10,20 @@ const DateTimePicker = () => {
     return (
         <>
             <LocalizationProvider dateAdapter={AdapterDayjs}>
-                <DemoContainer components={['DatePicker', 'MobileTimePicker']}>
-                    <DatePicker sx={{ width: "50%" }} />
-                   
-                    <MobileTimePicker sx={{ width: "50%" }} />
+                <div className="row gx-0" >
+                    <div className="col-sm-6">
+                    <DemoContainer components={['DatePicker']}>         
+                        <DatePicker sx={{ width: "100%" }} />         
                 </DemoContainer>
-            </LocalizationProvider>
-            <InputHelperText input_helper_text="Date format mm/dd/yyyy" />
+                <InputHelperText input_helper_text="Date format mm/dd/yyyy" />    
+                    </div>
+                    <div className="col-sm-6">
+                    <DemoContainer components={['MobileTimePicker']}>             
+                        <MobileTimePicker sx={{ width: "100%" }} />
+                </DemoContainer>
+                    </div>
+                </div>
+            </LocalizationProvider> 
         </>
     );
 }

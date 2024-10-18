@@ -17,13 +17,12 @@ const AccordionForm = (props) => {
     return(
         <>
         
-      <Accordion variant="outlined" sx={{marginTop:"20px"}}>
+      <Accordion variant="outlined" className="accordion">
         <AccordionSummary
-          expandIcon={accordion_icon === true ? <Add /> : <Remove />}
+          expandIcon={<Add />}
           aria-controls="panel3-content"
           id="panel3-header"
-          variant="outlined"
-          onClick={accordion_icon_fn}
+          className="accordion_heading"
         >
             <Typography align="center" sx={{width: '100%'}}>{props.accordion_name}</Typography>
           

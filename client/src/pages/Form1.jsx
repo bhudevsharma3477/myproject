@@ -1,16 +1,6 @@
 import React from "react";
 
-import { ListItemIcon, TextField } from "@mui/material";
-
-import List from '@mui/material/List';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemText from '@mui/material/ListItemText';
-import Collapse from '@mui/material/Collapse';
-import InboxIcon from '@mui/icons-material/MoveToInbox';
-
-import ExpandLess from '@mui/icons-material/ExpandLess';
-import ExpandMore from '@mui/icons-material/ExpandMore';
-import StarBorder from '@mui/icons-material/StarBorder';
+import { TextField } from "@mui/material";
 
 import FormLabelText from "../components/FormLabelText";
 import SearchInput from "../components/SearchInput";
@@ -34,11 +24,11 @@ const Form1 = ({ data, handleChange }) => {
           <form action="">
 
             <FormLabelText label_helper_text="" label_text="trip details" />
-            <div className="row">
-              <div className="col-lg-4 col-sm-6">
+            <div className="row gx-0">
+              <div className="col-md-4 col-sm-6">
                 <SelectInput data={data} handleChange={handleChange} />
               </div>
-              <div className="col-lg-8 col-sm-6">
+              <div className="col-md-8 col-sm-6">
                 <TextField
                 className="trip_details_number"
                   id="contact phone number"

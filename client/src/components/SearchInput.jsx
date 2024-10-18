@@ -16,7 +16,7 @@ const SearchInput = ({placeholder_name, input_helper_text}) => {
                 defaultValue=""
                 InputProps={{
                     endAdornment: (
-                        <IconButton>
+                        <IconButton disabled={true}>
                             <SearchOutlined />
                         </IconButton>
                     ),
