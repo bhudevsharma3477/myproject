@@ -1,55 +1,41 @@
 import React from "react";
-
-import { TextField } from "@mui/material";
-
-import FormLabelText from "../components/FormLabelText";
+import LabelTag from "../components/LabelTag";
 import SearchInput from "../components/SearchInput";
 import DateTimePicker from "../components/DateTimePicker";
-import SelectInput from "../components/SelectInput";
+import SelectTag from "../components/SelectTag";
 import AccordionForm from "../components/AccordionForm";
 import InputHelperText from "../components/InputHelperText";
-import FilePicker from "../components/FilePicker";
 import SaveDataOptions from "../components/SaveDataOptions";
+import InputTag from "../components/InputTag";
+import { trip_details_options } from "../select tag options/data";
+import { useGlobalContext } from "../ContextData";
 
-const Form1 = ({ data, handleChange }) => {
-
-
-
-
-
+const Form1 = () => {
+  const {...state} = useGlobalContext();
   return (
     <>
       <div className="form_1">
         <div className="container">
-          <form action="">
+          <form>
 
-            <FormLabelText label_helper_text="" label_text="trip details" />
+            <LabelTag label_helper_text="" label_text="trip details" />
             <div className="row gx-0">
               <div className="col-md-4 col-sm-6">
-                <SelectInput data={data} handleChange={handleChange} />
+                <SelectTag name="trip_details_option_value" options={trip_details_options} />
               </div>
               <div className="col-md-8 col-sm-6">
-                <TextField
-                className="trip_details_number"
-                  id="contact phone number"
-                  type="number"
-                  autoComplete="none"
-                  placeholder="Enter Trip Number"
-                />
+                <InputTag value={state.trip_details_number_value} type="number" placeholder="Enter Trip Details" name="trip_details_number_value" />
               </div>
             </div>
 
+            <LabelTag label_helper_text="" label_text="u.s. port of arrival" />
+            <SearchInput name="port_of_arrival" placeholder_name="Search..." input_helper_text="" />
 
-
-
-            <FormLabelText label_helper_text="" label_text="u.s. port of arrival" />
-            <SearchInput placeholder_name="Search..." input_helper_text="" />
-
-            <FormLabelText label_helper_text="" label_text="estimated arrival date and time" />
+            <LabelTag label_helper_text="" label_text="estimated arrival date and time" />
             <DateTimePicker />
 
-            <FormLabelText label_helper_text="(optional)" label_text="truck" />
-            <SearchInput placeholder_name="Unit or Plate Number" />
+            <LabelTag label_helper_text="(optional)" label_text="truck" />
+            <SearchInput name="truck" placeholder_name="Unit or Plate Number" />
 
 
             <AccordionForm accordion_name="Add Seal" />
@@ -57,8 +43,8 @@ const Form1 = ({ data, handleChange }) => {
 
             <InputHelperText input_helper_text="Required for manifest but can be added later" />
 
-            <FormLabelText label_helper_text="(optional)" label_text="trailer" />
-            <SearchInput placeholder_name="Unit or Plate Number" />
+            <LabelTag label_helper_text="(optional)" label_text="trailer" />
+            <SearchInput name="trailer" placeholder_name="Unit or Plate Number" />
 
             <AccordionForm accordion_name="Add Seal" />
             <AccordionForm accordion_name="Add IIT or Exemption" />
@@ -66,7 +52,7 @@ const Form1 = ({ data, handleChange }) => {
 
             <InputHelperText input_helper_text="Required for manifest but can be added later" />
 
-            <FormLabelText label_helper_text="(optional)" label_text="driver" />
+            <LabelTag label_helper_text="(optional)" label_text="driver" />
             <SearchInput placeholder_name="Driver Name" />
 
             <AccordionForm accordion_name="Add Team Driver" />
@@ -76,12 +62,12 @@ const Form1 = ({ data, handleChange }) => {
 
             <InputHelperText input_helper_text="Required for manifest but can be added later" />
 
-            <FormLabelText label_helper_text="(optional)" label_text="Upload Shipments (JSON)" />
-            <FilePicker />
+            <LabelTag label_helper_text="(optional)" label_text="Upload Shipments (JSON)" />
+           {/* <InputTag type="file" />*/}
 
-            <FormLabelText label_helper_text="(optional)" label_text="Upload Documentation" />
+            <LabelTag label_helper_text="(optional)" label_text="Upload Documentation" />
 
-            <FilePicker />
+           {/* <InputTag type="file" />*/}
 
             <SaveDataOptions />
           </form>
