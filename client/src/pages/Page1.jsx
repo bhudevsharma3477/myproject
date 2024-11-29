@@ -15,21 +15,29 @@ const Page1 = () => {
                     <form onSubmit={""}>
                     <LabelTag required={true} name="Trip Number" />
                  <div className="row">
-                    <div className="col">
-                    <SelectTag options={options} />
-                    </div>
-                    <div className="col">
-                        <InputTag />
-                    </div>
+                    <div className="col"><SelectTag options={options} /></div>
+                    <div className="col"><InputTag /></div>
                  </div>
                         
                       
                         <LabelTag required={true} name="U.S. Port of Arrival" />
-                        <SearchBar options={options} />
+                        <div className="row">
+                            <div className="col-6"><SearchBar options={options} /></div>
+                        </div>
+                      
                         <LabelTag required={true} name="Estimated Arrival Date and Time" />
                         <LabelTag name="Truck" />
+                        <div className="row">
+                            <div className="col-6"><SearchBar options={options} /></div>
+                        </div>
                         <LabelTag name="Trailer" />
+                        <div className="row">
+                            <div className="col-6"><SearchBar options={options} /></div>
+                        </div>
                         <LabelTag name="Driver" />
+                        <div className="row">
+                            <div className="col-6"><SearchBar options={options} /></div>
+                        </div>
                         <LabelTag name="Upload Shipments (JSON)" />
                         <FilePicker />
                         <LabelTag name="Upload Documentation" />

@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import { FormControl, InputLabel, MenuItem, Select, Typography } from "@mui/material";
+import { MenuItem, TextField } from "@mui/material";
 import select_styles from "./select_styles";
 import { UnfoldMoreRounded } from "@mui/icons-material";
-import { PopoverPaper } from "@mui/material";
 
 const SelectTag = ({ options }) => {
-    const [data, setdata] = useState("OPTION 1");
+    const [data, setdata] = useState();
     return (
         <>
-        <FormControl variant="filled">
-        <Select
+            <TextField
+                slotProps={{ select: { IconComponent: UnfoldMoreRounded } }}
+                variant="filled"
+                label="Select"
+                select
                 sx={select_styles.select}
                 size="small"
-                label="Select"
-                IconComponent={UnfoldMoreRounded}
-                labelId="demo-simple-select-label"
-                id="demo-simple-select"
                 value={data}
                 onChange={(e) => setdata(e.target.value)}>
                 {
@@ -26,13 +24,13 @@ const SelectTag = ({ options }) => {
                                 sx={select_styles.menuitem}
                                 value={value}
                             >
-                            {value}
+                                {value}
                             </MenuItem>
                         )
                     })
                 }
-            </Select>
-        </FormControl>
+            </TextField>
+
         </>
     );
 }

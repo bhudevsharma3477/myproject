@@ -6,6 +6,7 @@ const InputTag = () => {
     return (
         <>
             <TextField
+            autoComplete="off"
                 type="number"
                 sx={input_styles}
                 variant="filled"

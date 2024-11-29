@@ -1,6 +1,6 @@
 const select_styles = {
     select: {
-       // width: "50%",
+        width: "50%",
 
         "& .MuiOutlinedInput-input": {
            // border: "1px solid rgba(4, 158, 56)",
