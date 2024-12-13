@@ -1,11 +1,11 @@
 import React from "react";
 import { InputLabel, Typography } from "@mui/material";
-import label_styles from "./label_styles";
+import styles from "../styles";
 
 const LabelTag = ({ name, required }) => {
     return (
         <>
-            <InputLabel sx={label_styles.inputlabel} required={required}>{name}</InputLabel>
+            <InputLabel sx={styles.label} required={required}>{name}</InputLabel>
         </>
     );
 }

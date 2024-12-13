@@ -1,27 +1,32 @@
-import React, { useState } from "react";
+import React from "react";
 import { MenuItem, TextField } from "@mui/material";
-import select_styles from "./select_styles";
+import styles from "../styles";
 import { UnfoldMoreRounded } from "@mui/icons-material";
+import { useGlobalContext } from "../Context";
 
-const SelectTag = ({ options }) => {
-    const [data, setdata] = useState();
+const SelectTag = ({ options, value, name }) => {
+    const {input_and_select_onchange} = useGlobalContext();
+    
+
     return (
         <>
             <TextField
-                slotProps={{ select: { IconComponent: UnfoldMoreRounded } }}
+                slotProps={{ select: { IconComponent: UnfoldMoreRounded }  }}
+                hiddenLabel
                 variant="filled"
-                label="Select"
                 select
-                sx={select_styles.select}
+                sx={styles.select}
                 size="small"
-                value={data}
-                onChange={(e) => setdata(e.target.value)}>
+                value={value}
+                name={name}
+                onChange={input_and_select_onchange}
+            >
                 {
                     options.map((value, index) => {
                         return (
                             <MenuItem
                                 key={index + 1}
-                                sx={select_styles.menuitem}
+                                sx={styles.menuitem}
                                 value={value}
                             >
                                 {value}

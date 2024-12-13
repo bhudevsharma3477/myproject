@@ -1,6 +1,6 @@
 import React from "react";
 import {Button, TextField} from "@mui/material";
-import file_picker_styles from "./file_picker_styles";
+import styles from "../styles";
 
 const FilePicker = () => {
     return(
@@ -10,10 +10,10 @@ const FilePicker = () => {
         role={undefined}
         variant="contained"
         tabIndex={-1}
-        startIcon={null}
+        color="secondary"
         >
             upload file
-            <TextField type="file" sx={file_picker_styles} />
+            <TextField type="file" sx={styles.file_picker} />
         </Button>
         </>
     );
